@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW Forum Login</title>
+    <link rel="icon" href="./assets/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container_nav">
+            <div class="navbar">
+                <div class="botoes">
+                    <div class="login">
+                        <a href="./login.html"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></a>
+                    </div>
+                </div>
+                <div class="logos">
+                    <div class="logo_sw">
+                        <a href="./index.html"><img src="./assets/star-wars-logo.png"></a>
+                    </div>
+                </div>
+                <div class="redes_sociais">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="campos">
+            <h4>Informe seu email:</h4>
+            <input type="text" id="input_login" placeholder="email@email.com">
+            <h4>Informe sua senha:</h4>
+            <input type="password" id="input_senha" placeholder="senha">
+            <button onclick="entrar()">
+                Enviar
+            </button>
+            <h5>Ainda não possuí uma conta?</h5>
+           <a href="./cadastro.html">Cadastre-se!</a>
+        </div>
+        <div id="div_erros_login">
+
+        </div>
+    </main>
+    
+    <footer>
+        Desenvolvido por um fã de Star Wars &copy; Copyright 2022
+    </footer>
+</body>
+
+</html>
+
+<script src="./js/validações.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

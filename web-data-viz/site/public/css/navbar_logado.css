@@ -1,0 +1,22 @@
+.logado {
+    display: flex;
+    justify-content:space-between;
+    margin-left: 30px;
+}
+
+.imagem_usuario{
+    font-size: 30px;
+
+}
+
+.sair a{
+    color: #FFE81F;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.sair a:hover{
+    color: #b6a406;
+    transition: 0,3;
+}

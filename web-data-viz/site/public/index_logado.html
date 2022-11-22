@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Forum</title>
+    <link rel="icon" href="./assets/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="./css//navbar_logado.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container_nav">
+            <div class="navbar">
+                <div class="logado">
+                    <div class="imagem_usuario">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </div>
+                    <div class="nome_usuario">
+                        <span id="nome_usuario"></span>
+                    </div>
+                    <div class="sair">
+                        <a href="./index.html">
+                            <ion-icon name="exit-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="logos">
+                    <div class="logo_sw">
+                        <a href="./index_logado.html"><img src="./assets/star-wars-logo.png"></a>
+                    </div>
+                </div>
+                <div class="redes_sociais">
+                    <a href="">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Container do Carrossel de noticias-->
+        <div class="carrossel_container">
+            <div class="carrossel">
+                <!-- imagens de largura total, texto dos números e legendas -->
+                <div class="slides fade">
+                    <img src="./assets/noticia_filmagens_de_the_acolyte.jpg">
+                    <div class="text"><a href="https://www.omelete.com.br/star-wars/the-acolyte-inicia-producao">The
+                            Acolyte: Nova série derivada de Star Wars inicia produção</a></div>
+                </div>
+
+                <div class="slides fade">
+                    <img src="./assets/noticia_Obi-Wan_Kenobi.jpg">
+                    <div class="text"><a
+                            href="https://trecobox.com.br/roteirista-de-obi-wan-revela-frustracao/">Roteirista de
+                            Obi-Wan revela frustração com série de star wars</a></div>
+                </div>
+
+                <div class="slides fade">
+                    <img src="./assets/noticia_promo-star-wars_praia_grande.png">
+                    <div class="text"><a
+                            href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">Praia
+                            Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping</a></div>
+                </div>
+
+                <!-- botões de proximo e anterior -->
+                <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!--Campo de noticias separado por linhas -->
+        <div class="noticias">
+            <div class="linha1">
+                <div class="bloco_noticias1">
+                    <img src="./assets/noticia_visions.jpg">
+                    <br>
+                    <h3>
+                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada">Star Wars: Visions
+                            tem
+                            segunda temporada confirmada para 2023</a>
+                    </h3>
+                </div>
+                <div class="bloco_noticias1">
+                    <img src="./assets/noticia_andor.jpg">
+                    <br>
+                    <h3>
+                        <a href="https://www.omelete.com.br/star-wars/andor-temporada-2-filmagens">Andor: 2°
+                            Temporada
+                            começa filmagens ainda em novembro</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="linha2">
+                <div class="bloco_noticias2">
+                    <img src="./assets/mandalorian_noticia.jpg">
+                    <h3>
+                        <a
+                            href="https://br.ign.com/star-wars-the-mandalorian/98636/news/the-mandalorian-3-temporada-data-estreia-disney-plus">The
+                            Mandalorian: 3° Temporada ganha data de estreia</a>
+                    </h3>
+                </div>
+                <div class="bloco_noticias2">
+                    <img src="./assets/noticia_the_bad_batch.jpg">
+                    <h3>
+                        <a href="https://www.omelete.com.br/disney/the-bad-batch-segunda-temporada-data">The Bad
+                            Batch:
+                            2° Temporada é adiada para Janeiro</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="linha3">
+                <div class="bloco_noticias3">
+                    <img src="./assets/noticia_Star-Wars-Rebels.jpg">
+                    <h3>
+                        <a
+                            href="https://multiversonoticias.com.br/conexao-entre-luke-com-kanan-de-star-wars-rebels-e-confirmada/">Conexão
+                            entre Luke com Kanan, de "Star Wars Rebels", é confirmada!</a>
+                    </h3>
+                </div>
+                <div class="bloco_noticias3">
+                    <img src="./assets/noticia_boba_fett.jpg">
+                    <h3>
+                        <a
+                            href="https://www.tecmundo.com.br/minha-serie/233493-livro-boba-fett-saiba-tudo-cena-pos-creditos-serie.htm">O
+                            Livro de Boba Fett: saiba tudo sobre a cena pós-créditos da série</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="linha4">
+                <div class="bloco_noticias4">
+                    <img src="./assets/noticia_Star_Wars_Jedi_Survivor.webp">
+                    <h3>
+                        <a
+                            href="https://adrenaline.com.br/noticias/v/79945/star-wars-jedi-survivor-pode-ser-o-proximo-grande-jogo-da-electronic-arts">Star
+                            Wars Jedi: Survivor pode ser o próximo grande jogo da Electronic Arts</a>
+                    </h3>
+                </div>
+                <div class="bloco_noticias4">
+                    <img src="./assets/noticia_star_wars_lego.jpg">
+                    <h3>
+                        <a
+                            href="https://www.folhavitoria.com.br/games/noticia/10/2022/lego-star-wars-tem-novos-personagens-em-trailer-da-edicao-galactica">Lego
+                            Star Wars tem novos personagens em trailer da Edição Galáctica</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!--Campo de votação de personagem da semana-->
+        <div class="votacao">
+            <div class="titulo">
+                Vote para eleger o personagem da semana!
+            </div>
+            <div class="campos">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        Desenvolvido por um fã de Star Wars &copy; Copyright 2022
+    </footer>
+</body>
+
+</html>
+
+<script>
+    var carrosselIndex = 1;
+    Todos_Slides(carrosselIndex);
+
+    //Fazer os slides irem para frente e para trás
+    function plusSlides(n) {
+        Todos_Slides(carrosselIndex += n);
+    }
+
+    //Controle da Thumbnail de imagens
+    function currentSlide(n) {
+        Todos_Slides(carrosselIndex = n);
+    }
+
+    function Todos_Slides(n) {
+        var contador;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { carrosselIndex = 1 }
+        if (n < 1) { carrosselIndex = slides.length }
+        for (contador = 0; contador < slides.length; contador++) {
+            slides[contador].style.display = "none";
+        }
+        if (carrosselIndex > slides.length) {
+            carrosselIndex = 1 
+        }
+        for (contador = 0; contador < dots.length; contador++) {
+            dots[contador].className = dots[contador].className.replace("active", "");
+        }
+        slides[carrosselIndex - 1].style.display = "block";
+        dots[carrosselIndex - 1].className += " active";
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

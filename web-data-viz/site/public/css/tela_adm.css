@@ -1,0 +1,82 @@
+.sair a{
+    margin-left: 30px;
+    color: #FFE81F;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.sair a:hover{
+    color: #b6a406;
+    transition: 0,3
+}
+
+.logado {
+    height: 80vh;
+}
+/*
+Configuração dos graficos
+*/
+.noticias {
+    display: flex;
+    flex-direction: column;
+}
+
+.linha1 {
+    width: 100%;
+    height: 50vh;
+    border-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linha2 {
+    width: 100%;
+    height: 50vh;
+    border-right: 10px;
+    display: flex;
+    justify-content: space-evenly;  
+}
+
+.linha3 {
+    width: 100%;
+    height: 50vh;
+    border-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linha4 {
+    width: 100%;
+    height: 50vh;
+    border-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.graficos_noticias {
+    margin-top: 30px;
+    padding: 50px;
+    width: 47vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(15, 15, 15);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.graficos_noticias h3 {
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.graficos{
+background-color: rgb(219, 219, 219);
+border-radius: 10px;
+width: 40vw;
+height: 45vh;
+}

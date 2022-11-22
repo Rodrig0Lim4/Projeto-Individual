@@ -1,0 +1,72 @@
+main{
+    width: 100vw;
+    height: 80vh;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    width: 60vh;
+    height: 40vh;
+    background-color: rgb(105, 105, 105);
+    border-radius: 10px;
+    margin-left: 35%;
+}
+
+.campos h4{
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    font-size: 25px;
+    font-weight: bold;  
+    margin-top: 5px;
+}
+
+.campos h5{
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px; 
+}
+
+.campos a{
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.campos a:hover{
+    color: #b6a406;
+    transition: 0,3;
+}
+
+.campos input{
+    width: 40vh;
+    height: 10vh;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.campos button {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #FFE81F;
+    font-family: 'Secular One', sans-serif;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(90, 90, 90);
+}
+
+.campos button:hover{
+    background-color: rgb(70, 70, 70);
+    color: #ffe600;
+    transition: 0.3s all;
+}

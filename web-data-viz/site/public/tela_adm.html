@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Forum</title>
+    <link rel="icon" href="./assets/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="./css/tela_adm.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container_nav">
+            <div class="navbar">
+                <div class="logado">
+                    <div class="sair">
+                       <a href="./index.html"><ion-icon name="exit-outline"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="logos">
+                    <div class="logo_sw">
+                        <a href="./tela_adm.html"><img src="./assets/star-wars-logo.png"></a>
+                    </div>
+                </div>
+                <div class="redes_sociais">
+                    <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="logado">
+            <!--Campo dos graficos separados por baões -->
+            <div class="noticias">
+                <div class="linha1">
+                    <div class="graficos_noticias">
+                        <h3>Números de Votos Para os Personagens da Semana</h3>
+                        <br>
+                        <div class="graficos">
+                            <canvas id="graficos_votos_personagens"></canvas>
+                        </div>
+                    </div>
+                    <div class="graficos_noticias">
+                        <h3>Números de Acessos as Noticias</h3>
+                        <br>
+                        <div class="graficos">
+                            <canvas id="graficos_todas_noticias"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Desenvolvido por um fã de Star Wars &copy; Copyright 2022
+    </footer>
+</body>
+
+</html>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = [
+    'Yoda',
+    'Ahsoka',
+    'Obi-Wan',
+    'Grogu',
+    'Darth Vader',
+    'Darth Moul',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Votos',
+      backgroundColor: '#00b4fcaa',
+      borderColor: '#00b4fcaa',
+      data: [22, 24, 27, 23, 20, 18],
+    }
+    ]
+
+  };
+
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+  
+  const myChart = new Chart(
+    document.getElementById('graficos_votos_personagens'),
+    config
+  );
+
+  const labels1 = [
+  'N. Obi-Wan',
+  'N. Série',
+  'N. Praia',
+  'N. Visions',
+  'N. Andor',
+  'N. Mandalorian',
+  'N. BadBatch',
+  'N. Luke-Kanan',
+  'N. Boba-Fett',
+  'N. SW-Survivor',
+  'N. SW-Lego'
+];
+
+const data1 = {
+  labels: labels1,
+  datasets: [{
+    label: 'Votos',
+    backgroundColor: '#00b4fcaa',
+    borderColor: '#00b4fcaa',
+    data: [22, 24, 27, 23, 20, 18, 30, 50, 10, 2, 55,],
+  }
+  ]
+
+};
+
+
+const config1 = {
+  type: 'line',
+  data: data1,
+  options: {}
+};
+
+const myChart1 = new Chart(
+  document.getElementById('graficos_todas_noticias'),
+  config1
+);
+  </script>
+   
