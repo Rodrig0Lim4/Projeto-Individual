@@ -9,11 +9,10 @@ Body padrão do site
 */
 body{
     background-image: url(../assets/background_sw.jpg);
-    backdrop-filter: blur(10px);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: 100vw;
+    width: 97.8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +93,7 @@ footer {
     font-family: 'Secular One', sans-serif;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(15, 15, 15);
     height: 10vh;
     display: flex;

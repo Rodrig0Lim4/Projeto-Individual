@@ -1,6 +1,7 @@
 main{
     width: 100vw;
     height: 80vh;
+    backdrop-filter: blur(10px);
 }
 
 .campos{

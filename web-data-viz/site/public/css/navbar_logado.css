@@ -20,3 +20,46 @@
     color: #b6a406;
     transition: 0,3;
 }
+
+/*
+Campo votação!
+*/
+
+.votacao{
+    margin-top: 15px;
+    width: 37vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-left: 30vw;
+}
+
+.votacao .titulo{
+    color: #FFE81F;
+    font-family:  'Secular One', sans-serif;
+    font-weight: bold;
+}
+
+.campos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.campos h3{
+    color: #FFE81F;
+    font-family:  'Secular One', sans-serif;
+    font-weight: bold;
+}
+
+.campos img{
+    width: 20vw;
+    height: 30vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}

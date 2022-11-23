@@ -48,35 +48,40 @@
         <!-- Container do Carrossel de noticias-->
         <div class="carrossel_container">
             <div class="carrossel">
-                <!-- imagens e legendas das noticias -->
+                <!-- imagens de largura total, texto dos números e legendas -->
                 <div class="slides fade">
-                    <img id="noticia_filmagens" src="./assets/noticia_filmagens_de_the_acolyte.jpg">
-                    <div class="text"><a href="https://www.omelete.com.br/star-wars/the-acolyte-inicia-producao">The
-                            Acolyte: Nova série derivada de Star Wars inicia produção</a>
+                    <img src="./assets/noticia_filmagens_de_the_acolyte.jpg">
+                    <div class="text">
+                        <a href="https://www.omelete.com.br/star-wars/the-acolyte-inicia-producao">
+                            The Acolyte: Nova série derivada de Star Wars inicia produção
+                        </a>
                     </div>
                 </div>
 
                 <div class="slides fade">
                     <img src="./assets/noticia_Obi-Wan_Kenobi.jpg">
-                    <div class="text"><a
-                            href="https://trecobox.com.br/roteirista-de-obi-wan-revela-frustracao/">Roteirista de
-                            Obi-Wan revela frustração com série de star wars</a>
-                        </div>
+                    <div class="text">
+                        <a href="https://trecobox.com.br/roteirista-de-obi-wan-revela-frustracao/">
+                            Roteirista de Obi-Wan revela frustração com série de star wars
+                        </a>
+                    </div>
                 </div>
 
                 <div class="slides fade">
                     <img src="./assets/noticia_promo-star-wars_praia_grande.png">
-                    <div class="text"><a
-                            href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">Praia
-                            Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping</a>
-                        </div>
+                    <div class="text">
+                        <a href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">
+                            Praia Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping
+                        </a>
+                    </div>
                 </div>
 
                 <!-- botões de proximo e anterior -->
-                <a class="anterior" onclick="ProximoSlide(-1)">&#10094;</a>
-                <a class="proximo" onclick="ProximoSlide(1)">&#10095;</a>
+                <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
+
 
         <!--Campo de noticias separado por linhas -->
         <div class="noticias">
@@ -155,6 +160,18 @@
                 </div>
             </div>
         </div>
+
+        <!--Personagem da semana já eleito-->
+        <div class="votacao">
+            <div class="titulo">
+               <h2> Personagem da semana! </h2>
+               <h3> Nome do personagem </h3>
+            </div>
+            <div class="campos">
+                <img src="./assets/ahsoka_votacao.jpg">
+                <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ducimus labore suscipit deserunt officiis ut sit repellat quibusdam perferendis, porro voluptatibus dolorem autem. Ratione magni libero possimus temporibus tenetur odio?</h4>
+            </div>
+        </div>
     </main>
     
     <footer>
@@ -169,7 +186,7 @@
     Todos_Slides(carrosselIndex);
 
     //Fazer os slides irem para frente e para trás
-    function ProximoSlide(n) {
+    function plusSlides(n) {
         Todos_Slides(carrosselIndex += n);
     }
 
@@ -181,20 +198,20 @@
     function Todos_Slides(n) {
         var contador;
         var slides = document.getElementsByClassName("slides");
-        var noticias = document.getElementsByClassName("noticias");
+        var dots = document.getElementsByClassName("dot");
         if (n > slides.length) { carrosselIndex = 1 }
         if (n < 1) { carrosselIndex = slides.length }
         for (contador = 0; contador < slides.length; contador++) {
             slides[contador].style.display = "none";
         }
         if (carrosselIndex > slides.length) {
-            carrosselIndex = 1 
+            carrosselIndex = 1
         }
-        for (contador = 0; contador < noticias.length; contador++) {
-            noticias[i].className = noticias[contador].className.replace("active", "");
+        for (contador = 0; contador < dots.length; contador++) {
+            dots[contador].className = dots[contador].className.replace("active", "");
         }
         slides[carrosselIndex - 1].style.display = "block";
-        noticias[carrosselIndex - 1].className += " active";
+        dots[carrosselIndex - 1].className += " active";
     }
 </script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
