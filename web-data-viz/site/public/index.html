@@ -90,7 +90,7 @@
                     <img src="./assets/noticia_visions.jpg">
                     <br>
                     <h3>
-                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada">Star Wars: Visions
+                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada" target="_blank">Star Wars: Visions
                             tem
                             segunda temporada confirmada para 2023</a>
                     </h3>
@@ -151,7 +151,7 @@
                     </h3>
                 </div>
                 <div class="bloco_noticias4">
-                    <img src="./assets/noticia_star_wars_lego.jpg">
+                    <img onclick="receber_noticia(1, 'Edicao Galactica')" src="./assets/noticia_star_wars_lego.jpg">
                     <h3>
                         <a
                             href="https://www.folhavitoria.com.br/games/noticia/10/2022/lego-star-wars-tem-novos-personagens-em-trailer-da-edicao-galactica">Lego
@@ -182,6 +182,11 @@
 </html>
 
 <script>
+    // CONFIG PARA OS LINKS DO SITE IREM PARA O BANCO
+    // function receber_noticia(index, nomeImagem){
+    //     console.log(index)
+    //     console.log(nomeImagem)
+    // }
     var carrosselIndex = 1;
     Todos_Slides(carrosselIndex);
 

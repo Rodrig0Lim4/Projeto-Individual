@@ -3,7 +3,9 @@ main{
     height: 80vh;
     backdrop-filter: blur(10px);
 }
-
+body{
+width: 100%;
+}
 .campos{
     display: flex;
     flex-direction: column;
@@ -14,7 +16,7 @@ main{
     height: 40vh;
     background-color: rgb(105, 105, 105);
     border-radius: 10px;
-    margin-left: 35%;
+    margin-left: 32%;
 }
 
 .campos h4{
