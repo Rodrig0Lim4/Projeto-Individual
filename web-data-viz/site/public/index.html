@@ -21,7 +21,10 @@
             <div class="navbar">
                 <div class="botoes">
                     <div class="login">
-                        <a href="./login.html"><ion-icon name="person-circle-outline"></ion-icon></ion-icon></a>
+                        <a href="./login.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            </ion-icon>
+                        </a>
                     </div>
                 </div>
                 <div class="logos">
@@ -70,7 +73,8 @@
                 <div class="slides fade">
                     <img src="./assets/noticia_promo-star-wars_praia_grande.png">
                     <div class="text">
-                        <a href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">
+                        <a
+                            href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">
                             Praia Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping
                         </a>
                     </div>
@@ -90,7 +94,8 @@
                     <img src="./assets/noticia_visions.jpg">
                     <br>
                     <h3>
-                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada" target="_blank">Star Wars: Visions
+                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada" target="_blank">Star
+                            Wars: Visions
                             tem
                             segunda temporada confirmada para 2023</a>
                     </h3>
@@ -164,16 +169,18 @@
         <!--Personagem da semana já eleito-->
         <div class="votacao">
             <div class="titulo">
-               <h2> Personagem da semana! </h2>
-               <h3> Nome do personagem </h3>
+                <h2> Personagem da semana! </h2>
+                <h3> Nome do personagem </h3>
             </div>
             <div class="campos">
                 <img src="./assets/ahsoka_votacao.jpg">
-                <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ducimus labore suscipit deserunt officiis ut sit repellat quibusdam perferendis, porro voluptatibus dolorem autem. Ratione magni libero possimus temporibus tenetur odio?</h4>
+                <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ducimus labore suscipit
+                    deserunt officiis ut sit repellat quibusdam perferendis, porro voluptatibus dolorem autem. Ratione
+                    magni libero possimus temporibus tenetur odio?</h4>
             </div>
         </div>
     </main>
-    
+
     <footer>
         Desenvolvido por um fã de Star Wars &copy; Copyright 2022
     </footer>
@@ -187,37 +194,8 @@
     //     console.log(index)
     //     console.log(nomeImagem)
     // }
-    var carrosselIndex = 1;
-    Todos_Slides(carrosselIndex);
-
-    //Fazer os slides irem para frente e para trás
-    function plusSlides(n) {
-        Todos_Slides(carrosselIndex += n);
-    }
-
-    //Controle da Thumbnail de imagens
-    function currentSlide(n) {
-        Todos_Slides(carrosselIndex = n);
-    }
-
-    function Todos_Slides(n) {
-        var contador;
-        var slides = document.getElementsByClassName("slides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { carrosselIndex = 1 }
-        if (n < 1) { carrosselIndex = slides.length }
-        for (contador = 0; contador < slides.length; contador++) {
-            slides[contador].style.display = "none";
-        }
-        if (carrosselIndex > slides.length) {
-            carrosselIndex = 1
-        }
-        for (contador = 0; contador < dots.length; contador++) {
-            dots[contador].className = dots[contador].className.replace("active", "");
-        }
-        slides[carrosselIndex - 1].style.display = "block";
-        dots[carrosselIndex - 1].className += " active";
-    }
+    //Carrossel de votação
 </script>
+<script src="./js/carrossel.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

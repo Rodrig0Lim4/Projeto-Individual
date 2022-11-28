@@ -79,7 +79,8 @@
                 <div class="slides fade">
                     <img src="./assets/noticia_promo-star-wars_praia_grande.png">
                     <div class="text">
-                        <a href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">
+                        <a
+                            href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">
                             Praia Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping
                         </a>
                     </div>
@@ -117,7 +118,8 @@
                 <div class="bloco_noticias2">
                     <img src="./assets/mandalorian_noticia.jpg">
                     <h3>
-                        <a href="https://br.ign.com/star-wars-the-mandalorian/98636/news/the-mandalorian-3-temporada-data-estreia-disney-plus">The
+                        <a
+                            href="https://br.ign.com/star-wars-the-mandalorian/98636/news/the-mandalorian-3-temporada-data-estreia-disney-plus">The
                             Mandalorian: 3° Temporada ganha data de estreia
                         </a>
                     </h3>
@@ -135,7 +137,8 @@
                 <div class="bloco_noticias3">
                     <img src="./assets/noticia_Star-Wars-Rebels.jpg">
                     <h3>
-                        <a href="https://multiversonoticias.com.br/conexao-entre-luke-com-kanan-de-star-wars-rebels-e-confirmada/">
+                        <a
+                            href="https://multiversonoticias.com.br/conexao-entre-luke-com-kanan-de-star-wars-rebels-e-confirmada/">
                             Conexão entre Luke com Kanan, de "Star Wars Rebels", é confirmada!
                         </a>
                     </h3>
@@ -143,7 +146,8 @@
                 <div class="bloco_noticias3">
                     <img src="./assets/noticia_boba_fett.jpg">
                     <h3>
-                        <a href="https://www.tecmundo.com.br/minha-serie/233493-livro-boba-fett-saiba-tudo-cena-pos-creditos-serie.htm">
+                        <a
+                            href="https://www.tecmundo.com.br/minha-serie/233493-livro-boba-fett-saiba-tudo-cena-pos-creditos-serie.htm">
                             O Livro de Boba Fett: saiba tudo sobre a cena pós-créditos da série
                         </a>
                     </h3>
@@ -153,7 +157,8 @@
                 <div class="bloco_noticias4">
                     <img src="./assets/noticia_Star_Wars_Jedi_Survivor.webp">
                     <h3>
-                        <a href="https://adrenaline.com.br/noticias/v/79945/star-wars-jedi-survivor-pode-ser-o-proximo-grande-jogo-da-electronic-arts">
+                        <a
+                            href="https://adrenaline.com.br/noticias/v/79945/star-wars-jedi-survivor-pode-ser-o-proximo-grande-jogo-da-electronic-arts">
                             Star Wars Jedi: Survivor pode ser o próximo grande jogo da Electronic Arts
                         </a>
                     </h3>
@@ -161,7 +166,8 @@
                 <div class="bloco_noticias4">
                     <img src="./assets/noticia_star_wars_lego.jpg">
                     <h3>
-                        <a href="https://www.folhavitoria.com.br/games/noticia/10/2022/lego-star-wars-tem-novos-personagens-em-trailer-da-edicao-galactica">
+                        <a
+                            href="https://www.folhavitoria.com.br/games/noticia/10/2022/lego-star-wars-tem-novos-personagens-em-trailer-da-edicao-galactica">
                             Lego Star Wars tem novos personagens em trailer da Edição Galáctica
                         </a>
                     </h3>
@@ -169,16 +175,41 @@
             </div>
         </div>
         <!--Campo de votação de personagem da semana-->
-        <div class="votacao">
+        <div class="votacao_logado">
             <div class="titulo">
                 Vote para eleger o personagem da semana!
             </div>
-            <div class="campos">
-                <div>
-                    Nome do personagem
-                </div>
-                <div>
-                    imagem do personagem
+            <div class="container_votacao">
+                <div class="galeria_wrapper">
+                    <div class="galeria">
+                        <div class="votos1">
+                            <img src="./assets/ahsoka_votacao.jpg" class="item current_item">
+                            <h4 class="title current_title">Ahsoka Tano</h4>
+                        </div>
+                        <div class="votos2">
+                            <img src="./assets/yoda_votacao.jpg" class="item current_item">
+                            <h4 class="title current_title">Mestre Yoda</h4>
+                        </div>
+                        <div class="votos3">
+                            <img src="./assets/grogu_votacao.jpg" class="item current_item">
+                            <h4 class="title current_title">Grogu</h4>
+                        </div>
+                        <div class="votos4">
+                            <img src="./assets/Darth_Moul.jpg" class="item current_item">
+                            <h4 class="title current_title">Darth Moul</h4>
+                        </div>
+                        <div class="votos5">
+                            <img src="./assets/obi_wan.jpg" class="item current_item">
+                            <h4 class="title current_title">Obi Wan Kenobi</h4>
+                        </div>
+                        <div class="votos6">
+                            <img src="./assets/Darth_Vader.jpg" class="item current_item">
+                            <h4 class="title current_title">Darth Vader</h4>
+                        </div>
+                        <button class="arrow_left control" aria-label="Previous_Image">◁</button>
+                        <button class="arrow_right control" aria-label="Next_Image">▷</button>
+                    </div>
+                    <button class="voto"><h4>Votar</h4></button>
                 </div>
             </div>
         </div>
@@ -191,37 +222,61 @@
 </html>
 
 <script>
-    var carrosselIndex = 1;
-    Todos_Slides(carrosselIndex);
+    const controls =
+        document.querySelectorAll(".control");
 
-    //Fazer os slides irem para frente e para trás
-    function plusSlides(n) {
-        Todos_Slides(carrosselIndex += n);
-    }
+    let current_item = 0;
 
-    //Controle da Thumbnail de imagens
-    function currentSlide(n) {
-        Todos_Slides(carrosselIndex = n);
-    }
+    let current_title = 0;
 
-    function Todos_Slides(n) {
-        var contador;
-        var slides = document.getElementsByClassName("slides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { carrosselIndex = 1 }
-        if (n < 1) { carrosselIndex = slides.length }
-        for (contador = 0; contador < slides.length; contador++) {
-            slides[contador].style.display = "none";
-        }
-        if (carrosselIndex > slides.length) {
-            carrosselIndex = 1
-        }
-        for (contador = 0; contador < dots.length; contador++) {
-            dots[contador].className = dots[contador].className.replace("active", "");
-        }
-        slides[carrosselIndex - 1].style.display = "block";
-        dots[carrosselIndex - 1].className += " active";
-    }
+    const titles =
+        document.querySelectorAll(".title");
+    const max_titles = titles.length;
+
+    const items =
+        document.querySelectorAll(".item");
+    const max_items = items.length;
+
+    controls.forEach((control) => {
+        control.addEventListener("click", (e) => {
+            isLeft = e.target.classList.contains("arrow_left");
+
+            if (isLeft) {
+                current_item -= 1;
+                current_title -= 1;
+            } else {
+                current_item += 1;
+                current_title += 1;
+            }
+
+            if (current_item >= max_items && current_title >= max_titles) {
+                current_item = 0;
+                current_title = 0;
+            }
+
+            if (current_item < 0 && current_title < 0) {
+                current_item = max_items - 1;
+                current_title = max_titles - 1;
+            }
+
+            items.forEach((item) => item.classList.remove("current_item"));
+            
+            items[current_item].scrollIntoView({
+                behavior: "smooth",
+                inline: "center"
+            });
+
+            titles.forEach((title) => title.classList.remove("current_title"));
+            titles[current_title].scrollIntoView({
+                behavior: "smooth",
+                inline: "center"
+            })
+
+            items[current_item].classList.add("current_item");
+            titles[current_title].classList.add("current_title")
+        });
+    });
 </script>
+<script src="./js/carrossel.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -21,45 +21,142 @@
     transition: 0,3;
 }
 
+
 /*
-Campo votação!
+INICIO DO CARROSSEL DE VOTAÇÃO
 */
 
-.votacao{
+.votacao_logado{
     margin-top: 15px;
-    width: 37vw;
-    height: 50vh;
+    width: 30vw;
+    height: 53vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgb(15, 15, 15);
-    border-radius: 100px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    margin-left: 30vw;
+    margin-left: 36vw;
+    backdrop-filter: blur(10px);
 }
 
-.votacao .titulo{
+.votacao_logado .titulo{
     color: #FFE81F;
     font-family:  'Secular One', sans-serif;
     font-weight: bold;
+    justify-content: center;
 }
 
-.campos{
+.container_votacao{
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.galeria{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-flow: row nowrap;
+    gap: 10px;
 }
-.campos h3{
+
+.galeria_wrapper{
+    overflow-x: auto;
+}
+
+.title{
     color: #FFE81F;
+    font-family:  'Secular One', sans-serif;
+    font-weight: bold;
+    opacity: 0;
     font-family:  'Secular One', sans-serif;
     font-weight: bold;
 }
 
-.campos img{
+.current_title{
+    opacity: 1;
+}
+
+.item{
+    position:relative;
     width: 20vw;
     height: 30vh;
-    margin-top: 10px;
     border-radius: 10px;
-    margin-right: 10px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.current_item{
+    opacity: 1;
+    border: #FFE81F solid;
+    box-shadow: 0 0 10px #b6a406;
+}
+
+.arrow_left, .arrow_right{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    color: #FFE81F;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+    transition: all 200ms ease-in-out;
+}
+
+.arrow_right{
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.arrow_left:hover, .arrow_right:hover{
+    opacity: 1;
+}
+
+/* Esconder a Scrollbar da votação em todos os browsers*/
+.galeria_wrapper:-webkit-scrollbar /*Chrome, Safari e Opera*/ {
+    display: none;
+}
+
+.galeria_wrapper{
+    -ms-overflow-style: none;  /* InternetExplorer e Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/*FIM DO CARROSSEL DE VOTAÇÃO*/
+
+.voto{
+    border-radius: 10px;
+    background-color: #FFE81F;
+    position: absolute;
+    font-size: 20px;
+    line-height: 30px;
+    width: 50px;
+    margin-left: 50vh;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.voto:hover h4:hover{
+    transition: 0.3s;
+    background-color: #ffe600;
+    border-radius: 10px;
+    color: rgb(34, 197, 1);
+}
+
+.voto h4{
+    font-size: 15px;
+    font-family:  'Secular One', sans-serif;
+    font-weight: bold;
 }
