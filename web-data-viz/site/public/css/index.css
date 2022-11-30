@@ -5,53 +5,43 @@
     flex-direction: column;
 }
 
-.carrossel_container{
-    position: relative;
-    margin: auto;
+/* Slider de noticias */
+
+.slider{
+    margin: 0 auto;
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
 }
 
-.slides {
+.slides{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+}
+
+.slides input{
     display: none;
-    backdrop-filter: blur(10px);
 }
 
-.slides img{
+.slide{
     width: 100%;
-    height: 65vh;
+    position: relative;
+    transition: 2s;
 }
 
-.anterior, .proximo {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 30px;
-    transition: 0.6s ease;
-    user-select: none;
-    border-radius: 10px;
+.slide img{
+    width: 100vw;
+    height: 80vh;
 }
 
-.proximo {
-    right: 15px;
-}
-
-.anterior{
-    left: 15px;
-}
-
-.anterior:hover, .proximo:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.text a{
+.slide h3{
     font-family: 'Secular One', sans-serif;
     color: #FFE81F;
     font-size: 30px;
     padding: 7px 5px;
     position: absolute;
-    bottom: 11px;
+    bottom: 30px;
     width: 50%;
     background-color:  rgb(15, 15, 15);
     border-radius: 10px;
@@ -59,23 +49,79 @@
     margin-left: 10px;
 }
 
-.text a:hover{
-    text-decoration: underline;
+.slide h3:hover{
+    text-decoration:underline;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.manual_navegation{
+    position: absolute;
+    width: 100vw;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.manual_btn{
+    border: 2px solid #FFE81F;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
 }
-  
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+
+.manual_btn:not(:last-child){
+    margin-right: 20px;
 }
+
+.manual_btn:hover{
+    background-color: #FFE81F;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -200%;
+}
+
+.navegation_auto div{
+    border: 2px solid #FFE81F;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navegation_auto{
+    position: absolute;
+    width: 100vw;
+    margin-top: 399.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegation_auto div:not(:last-child){
+    margin-right: 20px;
+}
+
+#radio1:checked ~ .navegation_auto .auto_btn1{
+    background-color: #FFE81F;
+}
+
+#radio2:checked ~ .navegation_auto .auto_btn2{
+    background-color: #FFE81F;
+}
+
+#radio3:checked ~ .navegation_auto .auto_btn3{
+    background-color: #FFE81F;
+}
+
+/* Fim Slider de noticias */
 
 /*
 Configuração das noticias
@@ -146,6 +192,7 @@ Configuração das noticias
 
 .bloco_noticias1 h3:hover{
     text-decoration: underline;
+    color: #FFE81F;
 }
 
 .bloco_noticias2 {
@@ -176,6 +223,7 @@ Configuração das noticias
 
 .bloco_noticias2 h3:hover{
     text-decoration: underline;
+    color: #FFE81F;
 }
 
 .bloco_noticias3 {
@@ -207,6 +255,7 @@ Configuração das noticias
 
 .bloco_noticias3 h3:hover{
     text-decoration: underline;
+    color: #FFE81F;
 }
 
 .bloco_noticias4 {
@@ -238,6 +287,7 @@ Configuração das noticias
 
 .bloco_noticias4 h3:hover{
     text-decoration: underline;
+    color: #FFE81F;
 }
 
 /*
@@ -252,6 +302,7 @@ Campo votação!
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background-color: rgb(15, 15, 15);
     border-radius: 10px;
     margin-bottom: 20px;
@@ -263,13 +314,12 @@ Campo votação!
     color: #FFE81F;
     font-family:  'Secular One', sans-serif;
     font-weight: bold;
-    justify-content: center;
 }
 
 .campos{
     display: flex;
-    align-items: center;
 }
+
 .campos h3{
     color: #FFE81F;
     font-family:  'Secular One', sans-serif;
@@ -277,12 +327,12 @@ Campo votação!
 }
 
 .campos img{
-    width: 20vw;
-    height: 30vh;
-    margin-top: 10px;
+    width: 25vw;
+    height: 35vh;
     border-radius: 10px;
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 .campos h4{
     color: #FFE81F;
@@ -292,3 +342,5 @@ Campo votação!
     margin-right: 10px;
     margin-left: 5px;
 }
+
+/* Fim Campo Votação */

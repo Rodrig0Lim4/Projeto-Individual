@@ -33,13 +33,13 @@
                     </div>
                 </div>
                 <div class="redes_sociais">
-                    <a href="">
+                    <a href="https://www.facebook.com/" target="_blank">
                         <ion-icon name="logo-facebook"></ion-icon>
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/" target="_blank">
                         <ion-icon name="logo-instagram"></ion-icon>
                     </a>
-                    <a href="">
+                    <a href="https://twitter.com/" target="_blank">
                         <ion-icon name="logo-twitter"></ion-icon>
                     </a>
                 </div>
@@ -48,44 +48,69 @@
     </header>
 
     <main>
-        <!-- Container do Carrossel de noticias-->
-        <div class="carrossel_container">
-            <div class="carrossel">
-                <!-- imagens de largura total, texto dos números e legendas -->
-                <div class="slides fade">
-                    <img src="./assets/noticia_filmagens_de_the_acolyte.jpg">
-                    <div class="text">
-                        <a href="https://www.omelete.com.br/star-wars/the-acolyte-inicia-producao">
-                            The Acolyte: Nova série derivada de Star Wars inicia produção
-                        </a>
-                    </div>
+        <!-- Inicio do carrossel de noticias -->
+
+        <!-- INICIO DO CARROSSEL DE NOTICIAS -->
+
+        <div class="slider">
+
+            <div class="slides">
+                <!-- Botões do slider-->
+
+                <input type="radio" name="radio_btn" id="radio1">
+                <input type="radio" name="radio_btn" id="radio2">
+                <input type="radio" name="radio_btn" id="radio3">
+
+                <!-- Fim Botões do slider-->
+
+                <!-- Imagens das Noticias -->
+                <div class="slide first">
+                    <a onclick="noticia()" id="noticia1"
+                        href="https://www.omelete.com.br/star-wars/the-acolyte-inicia-producao" target="_blank">
+                        <img src="./assets/noticia_filmagens_de_the_acolyte.jpg" alt="the_acolyte">
+                        <h3> The Acolyte: Nova série derivada de Star Wars inicia produção </h3>
+                    </a>
                 </div>
 
-                <div class="slides fade">
-                    <img src="./assets/noticia_Obi-Wan_Kenobi.jpg">
-                    <div class="text">
-                        <a href="https://trecobox.com.br/roteirista-de-obi-wan-revela-frustracao/">
-                            Roteirista de Obi-Wan revela frustração com série de star wars
-                        </a>
-                    </div>
+                <div class="slide">
+                    <a onclick="noticia()" id="noticia1"
+                        href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916"
+                        target="_blank">
+                        <img onclick="noticia()" id="noticia3" src="./assets/noticia_promo-star-wars_praia_grande.png">
+                        <h3> Praia Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping </h3>
+                    </a>
                 </div>
 
-                <div class="slides fade">
-                    <img src="./assets/noticia_promo-star-wars_praia_grande.png">
-                    <div class="text">
-                        <a
-                            href="https://costanorte.com.br/cidades/praiagrande/praia-grande-mundo-de-star-wars-invade-decorac-o-de-natal-do-litoral-plaza-shopping-1.402916">
-                            Praia Grande: mundo de Star Wars invade decoração de Natal do Litoral Plaza Shopping
-                        </a>
-                    </div>
+                <div class="slide">
+                    <a onclick="noticia()" id="noticia1"
+                        href="https://www.omelete.com.br/star-wars/the-acolyte-inicia-producao" target="_blank">
+                        <img src="./assets/noticia_Obi-Wan_Kenobi.jpg" alt="obi_wan">
+                        <h3> Roteirista de Obi-Wan revela frustração com série de star wars </h3>
+                    </a>
                 </div>
+                <!-- Fim Imagens das Noticias -->
 
-                <!-- botões de proximo e anterior -->
-                <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+                <!-- Bolinhas de navegação -->
+                <div class="navegation_auto">
+                    <div class="auto_btn1"></div>
+                    <div class="auto_btn2"></div>
+                    <div class="auto_btn3"></div>
+                </div>
+                <!-- Fim Bolinhas de navegação -->
+
             </div>
+
+            <div class="manual_navegation">
+                <label for="radio1" class="manual_btn"></label>
+                <label for="radio2" class="manual_btn"></label>
+                <label for="radio3" class="manual_btn"></label>
+            </div>
+
         </div>
 
+        <!-- FIM DO CARROSSEL DE NOTICIAS -->
+
+        <!-- Fim do carrossel de noticias -->
 
         <!--Campo de noticias separado por linhas -->
         <div class="noticias">
@@ -94,7 +119,8 @@
                     <img src="./assets/noticia_visions.jpg">
                     <br>
                     <h3>
-                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada" target="_blank">Star
+                        <a href="https://www.omelete.com.br/star-wars/vision-segunda-temporada" target="_blank"
+                            target="_blank">Star
                             Wars: Visions
                             tem
                             segunda temporada confirmada para 2023</a>
@@ -104,7 +130,8 @@
                     <img src="./assets/noticia_andor.jpg">
                     <br>
                     <h3>
-                        <a href="https://www.omelete.com.br/star-wars/andor-temporada-2-filmagens">Andor: 2°
+                        <a href="https://www.omelete.com.br/star-wars/andor-temporada-2-filmagens"
+                            target="_blank">Andor: 2°
                             Temporada
                             começa filmagens ainda em novembro</a>
                     </h3>
@@ -114,15 +141,16 @@
                 <div class="bloco_noticias2">
                     <img src="./assets/mandalorian_noticia.jpg">
                     <h3>
-                        <a
-                            href="https://br.ign.com/star-wars-the-mandalorian/98636/news/the-mandalorian-3-temporada-data-estreia-disney-plus">The
+                        <a href="https://br.ign.com/star-wars-the-mandalorian/98636/news/the-mandalorian-3-temporada-data-estreia-disney-plus"
+                            target="_blank">The
                             Mandalorian: 3° Temporada ganha data de estreia</a>
                     </h3>
                 </div>
                 <div class="bloco_noticias2">
                     <img src="./assets/noticia_the_bad_batch.jpg">
                     <h3>
-                        <a href="https://www.omelete.com.br/disney/the-bad-batch-segunda-temporada-data">The Bad
+                        <a href="https://www.omelete.com.br/disney/the-bad-batch-segunda-temporada-data"
+                            target="_blank">The Bad
                             Batch:
                             2° Temporada é adiada para Janeiro</a>
                     </h3>
@@ -132,16 +160,16 @@
                 <div class="bloco_noticias3">
                     <img src="./assets/noticia_Star-Wars-Rebels.jpg">
                     <h3>
-                        <a
-                            href="https://multiversonoticias.com.br/conexao-entre-luke-com-kanan-de-star-wars-rebels-e-confirmada/">Conexão
+                        <a href="https://multiversonoticias.com.br/conexao-entre-luke-com-kanan-de-star-wars-rebels-e-confirmada/"
+                            target="_blank">Conexão
                             entre Luke com Kanan, de "Star Wars Rebels", é confirmada!</a>
                     </h3>
                 </div>
                 <div class="bloco_noticias3">
                     <img src="./assets/noticia_boba_fett.jpg">
                     <h3>
-                        <a
-                            href="https://www.tecmundo.com.br/minha-serie/233493-livro-boba-fett-saiba-tudo-cena-pos-creditos-serie.htm">O
+                        <a href="https://www.tecmundo.com.br/minha-serie/233493-livro-boba-fett-saiba-tudo-cena-pos-creditos-serie.htm"
+                            target="_blank">O
                             Livro de Boba Fett: saiba tudo sobre a cena pós-créditos da série</a>
                     </h3>
                 </div>
@@ -150,16 +178,16 @@
                 <div class="bloco_noticias4">
                     <img src="./assets/noticia_Star_Wars_Jedi_Survivor.webp">
                     <h3>
-                        <a
-                            href="https://adrenaline.com.br/noticias/v/79945/star-wars-jedi-survivor-pode-ser-o-proximo-grande-jogo-da-electronic-arts">Star
+                        <a href="https://adrenaline.com.br/noticias/v/79945/star-wars-jedi-survivor-pode-ser-o-proximo-grande-jogo-da-electronic-arts"
+                            target="_blank">Star
                             Wars Jedi: Survivor pode ser o próximo grande jogo da Electronic Arts</a>
                     </h3>
                 </div>
                 <div class="bloco_noticias4">
-                    <img onclick="receber_noticia(1, 'Edicao Galactica')" src="./assets/noticia_star_wars_lego.jpg">
+                    <img src="./assets/noticia_star_wars_lego.jpg">
                     <h3>
-                        <a
-                            href="https://www.folhavitoria.com.br/games/noticia/10/2022/lego-star-wars-tem-novos-personagens-em-trailer-da-edicao-galactica">Lego
+                        <a href="https://www.folhavitoria.com.br/games/noticia/10/2022/lego-star-wars-tem-novos-personagens-em-trailer-da-edicao-galactica"
+                            target="_blank">Lego
                             Star Wars tem novos personagens em trailer da Edição Galáctica</a>
                     </h3>
                 </div>
@@ -170,13 +198,14 @@
         <div class="votacao">
             <div class="titulo">
                 <h2> Personagem da semana! </h2>
-                <h3> Nome do personagem </h3>
+                <h3> Mestre Yoda </h3>
             </div>
             <div class="campos">
-                <img src="./assets/ahsoka_votacao.jpg">
-                <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ducimus labore suscipit
-                    deserunt officiis ut sit repellat quibusdam perferendis, porro voluptatibus dolorem autem. Ratione
-                    magni libero possimus temporibus tenetur odio?</h4>
+                <img src="./assets/yoda_inicial.jpg">
+                <h4>Yoda foi um dos Grandes Mestres do Alto Conselho Jedi e seu Tempo durante os últimos séculos da República Galáctica e da Ordem Jedi lhe fizeram uma figura inesquecivel na história galáctica. Durante 800 anos ele treinou novas gerações de Jedi sempre lutando a favor da lei e da ordem, enquanto buscava descobrir os segredos da força.
+                    Sua frase mais famosa é:<br>
+                    "Faça ou não faça, tentativa não ah" dita por ele para Luke Skywalker em O Imperio Contra-Ataca.
+                </h4>
             </div>
         </div>
     </main>
@@ -194,7 +223,6 @@
     //     console.log(index)
     //     console.log(nomeImagem)
     // }
-    //Carrossel de votação
 </script>
 <script src="./js/carrossel.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

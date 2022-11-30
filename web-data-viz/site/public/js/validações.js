@@ -83,13 +83,13 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
 
-                sessionStorage.EMAIL_USUARIO = json.email;
+                var validar_adm = sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
-
-                if(sessionStorage.EMAIL_USUARIO = json.email == "admSW@adm.com"){
+//                sessionStorage.EMAIL_USUARIO = 
+                if(validar_adm == "admSW@adm.com"){
                     window.location.replace("./tela_adm.html")
-                    alert("Bem vindo de volta!")
+                    alert("Bem vindo de volta chefe!")
                 }
                 else{
                     window.location.replace("./index_logado.html");
