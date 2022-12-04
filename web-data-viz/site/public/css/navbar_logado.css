@@ -1,170 +1,175 @@
 .logado {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-left: 30px;
 }
 
-.imagem_usuario{
+.imagem_usuario {
     font-size: 30px;
 
 }
 
-.sair a{
+.sair a {
     color: #FFE81F;
     text-decoration: none;
     font-size: 30px;
     margin-right: 5px;
 }
 
-.sair a:hover{
+.sair a:hover {
     color: #b6a406;
-    transition: 0,3;
+    transition: 0, 3;
 }
 
-
-/*
-INICIO DO CARROSSEL DE VOTAÇÃO
-*/
-
-.votacao_logado{
-    margin-top: 15px;
-    width: 30vw;
-    height: 53vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(15, 15, 15);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin-left: 36vw;
+main {
     backdrop-filter: blur(10px);
 }
 
-.votacao_logado .titulo{
+/*
+INICIO DA ESTILIZAÇÃO DE VOTAÇÃO
+*/
+
+.btn_iniciar_votacao {
+    margin-left: 93vh;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 15vw;
+    height: 8vh;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: 'Secular One', sans-serif;
     color: #FFE81F;
-    font-family:  'Secular One', sans-serif;
+    font-size: 30px;
     font-weight: bold;
+    text-decoration: none;
+    margin-left: 12%;
+}
+
+.container_votos {
+    display: flex;
+    align-items: center;
+}
+
+.opcao {
+    margin-top: 10px;
+    padding: 30px;
+    width: 405px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(15, 15, 15);
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.personagem_conjunto {
+    display: flex;
     justify-content: center;
 }
 
-.container_votacao{
-    position: relative;
-    padding: 15px;
-    margin-top: 10px;
-    max-width: 100%;
-    margin: 0 auto;
+
+.personagem_conjunto img {
+    width: 25vh;
+    height: 25vh;
+    margin-top: 6%;
+    border-radius: 10px;
 }
 
-.galeria{
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 10px;
+.personagem_conjunto input {
+    margin-left: 10px;
 }
 
-.galeria_wrapper{
-    overflow-x: auto;
-}
-
-.title{
+label {
+    font-family: 'Secular One', sans-serif;
     color: #FFE81F;
-    font-family:  'Secular One', sans-serif;
-    font-weight: bold;
-    opacity: 0;
-    font-family:  'Secular One', sans-serif;
-    font-weight: bold;
-}
-
-.current_title{
-    opacity: 1;
-}
-
-.item{
-    position:relative;
-    width: 20vw;
-    height: 30vh;
-    border-radius: 10px;
-    flex-shrink: 0;
-    opacity: 0;
-    transition: all 600ms ease-in-out;
-}
-
-.current_item{
-    opacity: 1;
-    border: #FFE81F solid;
-    box-shadow: 0 0 10px #b6a406;
-}
-
-.arrow_left, .arrow_right{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: 0;
-    font-size: 20px;
-    line-height: 250px;
-    width: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-    color: #FFE81F;
-    background: linear-gradient(to left, transparent 0%, black 200%);
-    opacity: 0.1;
-    transition: all 200ms ease-in-out;
-}
-
-.arrow_right{
-    left: auto;
-    right: 0;
-    background: linear-gradient(to right, transparent 0%, black 200%);
-}
-
-.arrow_left:hover, .arrow_right:hover{
-    opacity: 1;
-}
-
-/* Esconder a Scrollbar da votação em todos os browsers*/
-.galeria_wrapper:-webkit-scrollbar /*Chrome, Safari e Opera*/ {
-    display: none;
-}
-
-.galeria_wrapper{
-    -ms-overflow-style: none;  /* InternetExplorer e Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-/*FIM DO CARROSSEL DE VOTAÇÃO*/
-
-.voto{
-    border-radius: 10px;
-    background-color: #FFE81F;
-    position: absolute;
-    font-size: 20px;
-    line-height: 30px;
-    width: 50px;
-    margin-left: 50vh;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-}
-
-.voto:hover h4:hover{
-    transition: 0.3s;
-    background-color: #ffe600;
-    border-radius: 10px;
-    color: rgb(34, 197, 1);
-}
-
-.voto h4{
     font-size: 15px;
-    font-family:  'Secular One', sans-serif;
     font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
 }
 
-.item1{
-    margin-left: 50px;
+button {
+    width: 20vh;
+    height: 5vh;
+    background-color: rgb(15, 15, 15);
+    border: 1px solid #FFE81F;
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5%;
+    border-radius: 10px;
 }
 
-.item6{
-    margin-right: 50px;
+button:hover {
+    color: black;
+    border: 1px solid #FFE81F;
+    background-color: #FFE81F;
+    transition: 0.5s;
 }
+
+.btn_votar {
+    display: unset;
+}
+
+.botoes_votar_resultado {
+    margin-left: 36%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    width: 60vh;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+/*FIM DA ESTILIZAÇÃO DE VOTAÇÃO*/
+
+/*INICIO PERSONAGEM VENCEDOR*/
+
+.personagem_semana {
+    display: flex;
+    margin-left: 60vh;
+    margin-bottom: 10px;
+    flex-direction: column;
+    background-color: rgb(15, 15, 15);
+    width: 90vh;
+    height: 70vh;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.personagem_semana img {
+    width: 35vh;
+    height: 50vh;
+    margin-top: 3%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.vencedor h4 {
+    width: 50vh;
+    height: 50vh;
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.nome_personagem {
+    font-family: 'Secular One', sans-serif;
+    color: #FFE81F;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 38vh;
+    margin-top: 10px;
+}
+
+/*FIM PERSONAGEM VENCEDOR*/

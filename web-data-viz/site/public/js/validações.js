@@ -5,7 +5,7 @@ function cadastrar() {
     var senha = input_senha.value;
     var repetir_senha = input_repetir_senha.value;
 
-    
+
     if (nome.length < 2) {
         alert('Nome Inválido!');
     }
@@ -83,18 +83,13 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
 
-                var validar_adm = sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
-//                sessionStorage.EMAIL_USUARIO = 
-                if(validar_adm == "admSW@adm.com"){
-                    window.location.replace("./tela_adm.html")
-                    alert("Bem vindo de volta chefe!")
-                }
-                else{
-                    window.location.replace("./index_logado.html");
-                    alert("Bem vindo de volta!")
-                }
+                sessionStorage.ID_USUARIO = json.idUsuario;
+
+                alert("Bem vindo de volta!")
+                window.location.replace("./index_logado.html");
+            
             });
 
         } else {

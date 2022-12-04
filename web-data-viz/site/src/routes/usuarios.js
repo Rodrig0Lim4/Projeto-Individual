@@ -20,4 +20,15 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/inserirVotos/:idUsuario", function (req, res) {
+    usuarioController.inserirVotos(req, res);
+})
+
+router.post("/AcessosSite/:idUsuario", function (req, res){
+    usuarioController.AcessosSite(req, res);
+})
+
+router.post("/Trazer/:idUsuario", function (req, res){
+    usuarioController.Trazer(req, res);
+})
 module.exports = router;
